@@ -38,7 +38,10 @@ void bubbleSort(int size, int *arr)
                 swap(&arr[i - 1], &arr[i]); // array reference type but array er value jehetu primitive type tai swap function er argument e array er value gular address pass kore dsi ja swap function parameter akare receive korbe
                 swapped = true;
             }
+            // cout << "Run time calculation" << i << endl;
+            // ei khetre jodi 5ta element ni... tobe protibar ei index 0 theke check kora shuru kore 4 porjonto check kore ar boro ta choto tar shathe exchange hoi.. Orthat, 5ta element er jonne jonne prottekbar 4bar comparison chalai.. jaar fole eta selection sort theke slower process. Karon =>  5ta element er jonne eta run kore => 4 + 4 + 4 + 4 + 4 = 20 bar..
         }
+        // cout << "Run time calculation" << endl;
     }
 }
 

@@ -20,19 +20,31 @@ void selectionSort(int size, int *arr)
 
     cout << "After Sorting: ";
     int i, j, key;
-    for (i = 0; i < size; i++)
+    bool swapped = true;
+    i = 0;
+    while (swapped)
     {
+        swapped = false;
         key = arr[i];
         for (j = i + 1; j < size; j++)
         {
             if (arr[j] < arr[i])
             {
                 key = arr[j];
+
+                arr[j] = arr[i];
+                arr[i] = key;
+                swapped = true;
             }
-            arr[j] = arr[i];
-            arr[i] = key;
+            // cout << "Run time calculation " << j << endl;
+            // dekha jabe jodi 5ta element ni... tobe prothombar index 1 theke theke 4 porjonto check korbe ar choto ta borotar shathe exchange hobe.. erpor index 2 theke 4 porjonto, erpor index 3 theke 4 porjonto, erpor just index 4 ei => So, 5ta element er jonne eta run kore => 4 + 3 + 2 + 1 + 0  = 10 bar..(0 after sorted)
+            // Kintu Bubble Sort er khetre jodi 5ta element ni... tobe protibar ei index 0 theke check kora shuru kore 4 porjonto check kore ar boro ta choto tar shathe exchange hoi.. Orthat, 5ta element er jonne jonne prottekbar 4bar comparison chalai.. jaar fole eta selection sort theke slower process. Karon =>  5ta element er jonne eta run kore => 4 + 4 + 4 + 4 + 4 = 20 bar..
+
+            // Jokhon sorted array input dbo tokhon 2tai prothom loop e 4bar comparison chalabe then output return korbe.. orthat speed same thakbe
         }
+        i++;
         // arr[i] = key;
+        // cout << "Run time calculation" << endl;
     }
 }
 
