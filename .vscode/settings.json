@@ -1,5 +1,6 @@
 {
   "files.associations": {
     "ostream": "cpp"
-  }
+  },
+  "workbench.colorTheme": "Community Material Theme Palenight High Contrast"
 }
