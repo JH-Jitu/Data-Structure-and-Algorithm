@@ -14,26 +14,26 @@ void inputArray(int size, int *arr)
     }
 }
 
-// To sort the Array
+// To sort the Array (optimized)
 void selectionSort(int size, int *arr)
 {
 
     cout << "After Sorting: ";
-    int i, j, key;
+    int i, j, minValue;
     bool swapped = true;
     i = 0;
     while (swapped)
     {
         swapped = false;
-        key = arr[i];
+        minValue = arr[i];
         for (j = i + 1; j < size; j++)
         {
             if (arr[j] < arr[i])
             {
-                key = arr[j];
+                minValue = arr[j];
 
                 arr[j] = arr[i];
-                arr[i] = key;
+                arr[i] = minValue;
                 swapped = true;
             }
             // cout << "Run time calculation " << j << endl;
@@ -47,6 +47,30 @@ void selectionSort(int size, int *arr)
         // cout << "Run time calculation" << endl;
     }
 }
+
+// Non-Optimized
+// void selectionSort(int size, int *arr)
+// {
+
+//     cout << "After Sorting: ";
+//     int select, j, minValue, minIndex;
+//     for (select = 0; select < (size - 1); select++)
+//     {
+//         minIndex = select;
+//         minValue = arr[select];
+//         for (j = select + 1; j < size; j++)
+//         {
+//             if (arr[j] < arr[select])
+//             {
+//                 minValue = arr[j];
+//                 minIndex = j;
+//             }
+//         }
+
+//         arr[minIndex] = arr[select];
+//         arr[select] = minValue;
+//     }
+// }
 
 // To Display Array
 void displayArray(int size, int *arr)
