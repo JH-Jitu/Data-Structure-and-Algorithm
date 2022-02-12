@@ -2,7 +2,10 @@
   "files.associations": {
     "ostream": "cpp",
     "iostream": "cpp",
-    "array": "cpp"
+    "array": "cpp",
+    "string_view": "cpp",
+    "initializer_list": "cpp",
+    "utility": "cpp"
   },
   "workbench.colorTheme": "Community Material Theme Palenight High Contrast"
 }
