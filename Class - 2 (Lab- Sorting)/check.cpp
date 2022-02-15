@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-double lengthOfArray(int arr[])
+double lengthOfArray(int *arr)
 {
     // int length = sizeof(arr) / sizeof(arr[0]);
     // return length;

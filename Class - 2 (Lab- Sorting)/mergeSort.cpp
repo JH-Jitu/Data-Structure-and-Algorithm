@@ -14,7 +14,9 @@ int lengthFunc(int *arr)
 void inputArray(int size, int *arr)
 
 {
-    int length = lengthFunc(arr);
+    // int length = lengthFunc(arr);
+    // int length = sizeof(arr) / sizeof(arr[0]);
+
     cout << "Enter the elements now: " << endl;
 
     for (int i = 0; i < size; i++)
@@ -27,8 +29,10 @@ void inputArray(int size, int *arr)
 // Merge the array
 void merge(int *leftArray, int *rightArray, int *array)
 {
-    int lengthOfLeftArray = lengthFunc(leftArray);
-    int lengthOfRightArray = lengthFunc(rightArray);
+    // int lengthOfLeftArray = lengthFunc(leftArray);
+    // int lengthOfRightArray = lengthFunc(rightArray);
+    int lengthOfLeftArray = sizeof(leftArray) / sizeof(leftArray[0]);
+    int lengthOfRightArray = sizeof(rightArray) / sizeof(rightArray[0]);
 
     int i, j, k;
     i = 0;
@@ -67,7 +71,8 @@ void merge(int *leftArray, int *rightArray, int *array)
 // Merge Sort Function (First making partition and then using recursion)
 void mergeSort(int *array)
 {
-    int lengthOfArray = lengthFunc(array);
+    // int lengthOfArray = lengthFunc(array);
+    int lengthOfArray = sizeof(array) / sizeof(array[0]);
     if (lengthOfArray < 2)
         return;
     // int mid = lengthOfArray % 2 == 0 ? lengthOfArray / 2 : ((lengthOfArray + 1) / 2);
@@ -95,9 +100,10 @@ void mergeSort(int *array)
 void displayArray(int size, int *arr)
 
 {
-    int length = lengthFunc(arr);
+    // int length = lengthFunc(arr);
+    // int length = sizeof(arr) / sizeof(arr[0]);
     cout << "[";
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < size; i++)
     {
         cout << arr[i] << " ";
     }
