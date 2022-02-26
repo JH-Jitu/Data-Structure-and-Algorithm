@@ -62,7 +62,7 @@ void Merge(Point leftArray[], Point rightArray[], Point Array[], int lengthOfLef
             // Array[k] = rightArray[j];
             j++;
         }
-        // k++;
+        // k++;8i
     }
 
     while (i < lengthOfLeftArray)
