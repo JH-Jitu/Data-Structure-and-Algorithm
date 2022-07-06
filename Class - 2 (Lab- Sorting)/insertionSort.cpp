@@ -20,7 +20,7 @@ void insertionSort(int size, int *arr)
 
     cout << "After Sorting: ";
     int i, j, key;
-    for (int j = 1; j < size; j++)
+    for (int j = 1; j < 3; j++)
     {
         key = arr[j];
         i = j - 1;

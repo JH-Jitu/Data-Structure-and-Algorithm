@@ -22,15 +22,15 @@ int partition(int *array, int low, int high)
 {
     int left, right, pivotItem;
     pivotItem = array[low];
-    // int pivot = left = low;
+    left = low;
     right = high;
     while (left < right)
     {
-        while (array[left] <= pivotItem)
+        while (array[left] <= pivotItem && left < high)
         {
             left++;
         }
-        while (array[right] >= pivotItem)
+        while (array[right] > pivotItem && right > low)
         {
             right--;
         }
@@ -54,7 +54,7 @@ void quickSort(int array[], int low, int high)
 
         int pivot = partition(array, low, high);
 
-        quickSort(array, low, pivot - 1);
+        quickSort(array, low, pivot);
 
         quickSort(array, pivot + 1, high);
     }
@@ -63,7 +63,7 @@ void quickSort(int array[], int low, int high)
 // Main Execution
 int main()
 {
-    int array[] = {9, 7, 5, 11, 12, 2};
+    int array[] = {10, 16, 8, 12, 15, 6, 3, 9, 5, 100};
     int lengthOfArray = sizeof(array) / sizeof(array[0]);
 
     cout << "Unsorted Array: " << endl;
