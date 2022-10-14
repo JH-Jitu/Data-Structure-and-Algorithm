@@ -1,18 +1,18 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-// To take input of array
-void inputArray(int size, int *arr)
-
+struct Recommendations
 {
-    cout << "Enter the elements now: " << endl;
+    string name;
+    int timeSpend;
 
-    for (int i = 0; i < size; i++)
+    Recommendations(string a, int b)
     {
-        cout << "Enter element {" << i + 1 << "}: ";
-        cin >> arr[i];
+        name = a;
+        timeSpend = b;
     }
-}
+};
 
 // To sort the Array
 void insertionSort(int size, int *arr)
@@ -49,12 +49,16 @@ void displayArray(int size, int *arr)
 // Main Function
 int main()
 {
-    int size;
-    cout << "Enter the size of array: ";
-    cin >> size;
-    int arr[size];
+    // int size;
+    // cout << "Enter the size of array: ";
+    // cin >> size;
 
-    inputArray(size, arr); // To take input the values of array
+    Recommendations r1("C# Videos", 5);
+    cout << r1.name;
+    int arr[6] = {5, 20, 15, 30, 10, 20};
+
+    int size = sizeof(arr) / sizeof(arr[0]);
+    // inputArray(size, arr); // To take input the values of array
     cout << "Your array: ";
     displayArray(size, arr); // To display array
 
